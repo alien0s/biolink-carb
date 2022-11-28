@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biolink @carbacre</title>
+<meta name="description" content="Gráfico">
+<meta name="robots" content="noindex, nofollow">
+<!-- <link rel="stylesheet" href=> -->
+<style>
+	*, ::after, ::before {
+	    box-sizing: border-box;
+	}
+	:root{
+		--blue-buttom: #1658dd;
+	}
+	h2{
+		font-family: "Montserrat Regular";
+		color: #fff;
+		overflow: hidden; /* Ensures the content is not revealed until the animation */
+		border-right: .15em solid orange; /* The typwriter cursor */
+		white-space: nowrap; /* Keeps the content on a single line */
+		margin: 20px auto; /* Gives that scrolling effect as the typing happens */
+		animation: 
+		    typing 3.5s steps(40, end),
+		    blink-caret .75s step-end infinite;
+
+	}
+
+	@keyframes typing {
+	  from { width: 0 }
+	  to { width: 400px }
+	}
+
+	@keyframes blink-caret {
+	  from, to { border-color: transparent }
+	  50% { border-color: #feff00; }
+	}
+	.container{
+		margin-right: auto;
+    	margin-left: auto;
+	}
+	
+	@media screen and (min-width: 10px) {
+		.container{
+			width: 100%;
+			max-width: 100%;
+			margin-right: auto;
+    		margin-left: auto;
+		}
+	}
+	@media screen and (min-width: 992px) {
+		.container{
+			width: 60%;
+			max-width: 60%;
+		}
+	}
+	.row {
+	    display: -ms-flexbox;
+	    display: flex;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	}
+	body{
+		background-image: linear-gradient(18deg, rgba(8,249,205,1) 0%, rgba(69,223,255,1) 58%, rgba(0,194,255,1) 100%);
+		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+		margin: 0px;
+	    padding: 0px;
+	    border: 0px;
+	    vertical-align: baseline;
+	    height: 100vh;
+	}
+	@keyframes background{
+		0%{
+			background-position: 0 50%;
+		}
+		50%{
+			background-position: 100% 50%
+		}
+		100%{
+			background-position: 0 50%;
+		}
+	}
+	#content{
+		background-image: linear-gradient(18deg, rgba(8,249,205,1) 0%, rgba(69,223,255,1) 25%, rgba(0,194,255,1) 50%, rgb(234 255 129) 75%, rgb(253 173 92) 100%);
+    	background-size: 600% 100%;
+		animation: background 58s ease infinite;
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+	svg{
+		transition: 0.2s linear;
+	}
+	.ig-fb:hover svg{
+		transform: scale(1.6);
+	}
+		
+	@font-face {
+    	font-family: Montserrat;
+    	src: url(https://eventos.anra.org.br/assets/fonts/montserrat-medium.ttf);
+    }
+    @font-face {
+    	font-family: Montserrat Bold;
+    	src: url(https://eventos.anra.org.br/assets/fonts/montserrat-bold.ttf);
+    }
+    @font-face {
+    	font-family: Montserrat Regular;
+    	src: url(https://eventos.anra.org.br/assets/fonts/montserrat-regular.ttf);
+    }
+    @font-face {
+    	font-family: Montserrat Light;
+    	src: url(https://eventos.anra.org.br/assets/fonts/montserrat-light.ttf);
+    }
+	.box-title{
+		-webkit-box-align: center;
+	    align-items: center;
+	    flex-direction: column;
+	    display: flex;
+	    width: 100%;
+	    height: 100%;
+	    margin: 30px 0;
+	}
+	.img-logo{
+		border-radius: 50%;
+	    width: 96px;
+	    height: 96px;
+	    object-fit: contain;
+	    object-position: initial;
+	    filter: none;
+	    background-size: 100%;
+	    background-image: url(https://scontent.fpvh1-1.fna.fbcdn.net/v/t39.30808-1/316681476_5731662990213418_8544798239194351654_n.jpg?stp=dst-jpg_p200x200&_nc_cat=106&ccb=1-7&_nc_sid=1eb0c7&_nc_ohc=ZPV8TDstQysAX_OQT2C&_nc_ht=scontent.fpvh1-1.fna&oh=00_AfB2oAjE22V4dJNDCqBNoOWn0Vg1vHiXZBL0p41NKRcPZg&oe=63882CCE);
+	}
+	.box-ig-fb{
+		display: flex;
+	}
+	.box-links{
+		width: 100%;
+		transition: background-color 150ms ease 0s, -webkit-transform 150ms ease 0s, -webkit-backdrop-filter 150ms ease 0s;
+		backdrop-filter: blur(10px);
+		background-color: rgb(255 255 255 / 48%);
+		padding: 20px 0px 20px 0px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+    	justify-content: center;
+    	border-radius: 10px;
+	}
+	.buttom{
+		font-family: "Montserrat Regular";
+		background: #fff;
+	    width: 95%;
+	    padding: 0.45rem;
+	    font-size: 15px;
+	    font-weight: bold;
+	    margin: 6px 0px;
+	    text-decoration: none;
+	    color: var(--blue-buttom);
+	    display: inline-block;
+	    text-align: center;
+	    white-space: nowrap;
+	    vertical-align: middle;
+	    -webkit-user-select: none;
+	    -moz-user-select: none;
+	    -ms-user-select: none;
+	    user-select: none;
+	    border: 1px solid transparent;
+	    padding: 0.575rem 0.75rem;
+	    line-height: 1.5;
+	    border-radius: 8px;
+	    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	}
+	.icon{
+		margin-top: -2.9px;
+	    padding: 0 11px;
+	    vertical-align: middle;
+	    display: inline-flex;
+	}
+	.icon>svg {
+	    width: 22px;
+	    fill: var(--blue-buttom);
+	}
+	.buttom:hover{
+		background-color: var(--blue-buttom);
+		color: #fff;
+	}
+	.buttom:hover .icon>svg{
+		fill: #fff;
+		animation: float-icon 1s ease;
+	}
+	@keyframes float-icon {
+	  50%{
+	  	transform: translateY(-5px);
+	  }
+	}
+</style>
+</head>
+<body>
+	<div id="content">
+		<div class="container">
+			<div class="row">
+				<div class="box-title">
+					<div class="img-logo"></div>
+					<h2>Colégio Adventista de Rio Branco</h2>
+					<div class="box-ig-fb">
+						<a target="_blank" href="https://instagram.com/carbacre">
+							<span class="icon ig-fb">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" width="24" height="24">
+								<g>
+									<path d="M12,2.162c3.204,0,3.584,0.012,4.849,0.07c1.308,0.06,2.655,0.358,3.608,1.311c0.962,0.962,1.251,2.296,1.311,3.608   c0.058,1.265,0.07,1.645,0.07,4.849c0,3.204-0.012,3.584-0.07,4.849c-0.059,1.301-0.364,2.661-1.311,3.608   c-0.962,0.962-2.295,1.251-3.608,1.311c-1.265,0.058-1.645,0.07-4.849,0.07s-3.584-0.012-4.849-0.07   c-1.291-0.059-2.669-0.371-3.608-1.311c-0.957-0.957-1.251-2.304-1.311-3.608c-0.058-1.265-0.07-1.645-0.07-4.849   c0-3.204,0.012-3.584,0.07-4.849c0.059-1.296,0.367-2.664,1.311-3.608c0.96-0.96,2.299-1.251,3.608-1.311   C8.416,2.174,8.796,2.162,12,2.162 M12,0C8.741,0,8.332,0.014,7.052,0.072C5.197,0.157,3.355,0.673,2.014,2.014   C0.668,3.36,0.157,5.198,0.072,7.052C0.014,8.332,0,8.741,0,12c0,3.259,0.014,3.668,0.072,4.948c0.085,1.853,0.603,3.7,1.942,5.038   c1.345,1.345,3.186,1.857,5.038,1.942C8.332,23.986,8.741,24,12,24c3.259,0,3.668-0.014,4.948-0.072   c1.854-0.085,3.698-0.602,5.038-1.942c1.347-1.347,1.857-3.184,1.942-5.038C23.986,15.668,24,15.259,24,12   c0-3.259-0.014-3.668-0.072-4.948c-0.085-1.855-0.602-3.698-1.942-5.038c-1.343-1.343-3.189-1.858-5.038-1.942   C15.668,0.014,15.259,0,12,0z"/>
+									<path d="M12,5.838c-3.403,0-6.162,2.759-6.162,6.162c0,3.403,2.759,6.162,6.162,6.162s6.162-2.759,6.162-6.162   C18.162,8.597,15.403,5.838,12,5.838z M12,16c-2.209,0-4-1.791-4-4s1.791-4,4-4s4,1.791,4,4S14.209,16,12,16z"/>
+									<circle cx="18.406" cy="5.594" r="1.44"/>
+								</g>
+							</span>
+						</a>
+						<a target="_blank" href="https://facebook.com/carbacre">
+							<span class="icon ig-fb">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" width="24" height="24">
+									<g>
+										<path d="M24,12.073c0,5.989-4.394,10.954-10.13,11.855v-8.363h2.789l0.531-3.46H13.87V9.86c0-0.947,0.464-1.869,1.95-1.869h1.509   V5.045c0,0-1.37-0.234-2.679-0.234c-2.734,0-4.52,1.657-4.52,4.656v2.637H7.091v3.46h3.039v8.363C4.395,23.025,0,18.061,0,12.073   c0-6.627,5.373-12,12-12S24,5.445,24,12.073z"/>
+									</g>
+							</span>
+						</a>
+					</div>
+				</div>
+				<div class="box-links">
+					<a class="buttom" target="_blank" href="https://riobranco.educacaoadventista.org.br">
+							<span class="icon">
+								<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="24" height="24"><path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm8.657,7H17.431A19.675,19.675,0,0,0,14.6,2.342,10.041,10.041,0,0,1,20.657,7ZM16.5,12a10.209,10.209,0,0,1-.473,3H7.973A10.209,10.209,0,0,1,7.5,12a10.209,10.209,0,0,1,.473-3h8.054A10.209,10.209,0,0,1,16.5,12ZM8.774,17h6.452A19.562,19.562,0,0,1,12,21.588,19.562,19.562,0,0,1,8.774,17Zm0-10A19.562,19.562,0,0,1,12,2.412,19.562,19.562,0,0,1,15.226,7ZM9.4,2.342A19.7,19.7,0,0,0,6.569,7H3.343A10.041,10.041,0,0,1,9.4,2.342ZM2.46,9H5.892a11.676,11.676,0,0,0,0,6H2.46a10.013,10.013,0,0,1,0-6Zm.883,8H6.569A19.675,19.675,0,0,0,9.4,21.658,10.041,10.041,0,0,1,3.343,17ZM14.6,21.658A19.7,19.7,0,0,0,17.431,17h3.226A10.041,10.041,0,0,1,14.6,21.658ZM21.54,15H18.108a11.676,11.676,0,0,0,0-6H21.54a10.013,10.013,0,0,1,0,6Z"/></svg>
+							</span>Nosso site
+					</a>
+					<a class="buttom" target="_blank" href="https://www.educacaoadventista.org.br/matricula//ac/rio-branco/colegio-adventista-de-rio-branco?origem=1">
+							<span class="icon">
+								<svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="24" height="24"><path d="M18.656.93,6.464,13.122A4.966,4.966,0,0,0,5,16.657V18a1,1,0,0,0,1,1H7.343a4.966,4.966,0,0,0,3.535-1.464L23.07,5.344a3.125,3.125,0,0,0,0-4.414A3.194,3.194,0,0,0,18.656.93Zm3,3L9.464,16.122A3.02,3.02,0,0,1,7.343,17H7v-.343a3.02,3.02,0,0,1,.878-2.121L20.07,2.344a1.148,1.148,0,0,1,1.586,0A1.123,1.123,0,0,1,21.656,3.93Z"/><path d="M23,8.979a1,1,0,0,0-1,1V15H18a3,3,0,0,0-3,3v4H5a3,3,0,0,1-3-3V5A3,3,0,0,1,5,2h9.042a1,1,0,0,0,0-2H5A5.006,5.006,0,0,0,0,5V19a5.006,5.006,0,0,0,5,5H16.343a4.968,4.968,0,0,0,3.536-1.464l2.656-2.658A4.968,4.968,0,0,0,24,16.343V9.979A1,1,0,0,0,23,8.979ZM18.465,21.122a2.975,2.975,0,0,1-1.465.8V18a1,1,0,0,1,1-1h3.925a3.016,3.016,0,0,1-.8,1.464Z"/></svg>
+
+							</span>Matricule-se agora
+					</a>
+					<a class="buttom" target="_blank" href="https://riobranco.educacaoadventista.org.br">
+							<span class="icon">
+								<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="24" height="24"><path d="M24,9.724V19a5.006,5.006,0,0,1-5,5H18a1,1,0,0,1,0-2h1a3,3,0,0,0,3-3V9.724a3,3,0,0,0-1.322-2.487l-7-4.723a2.979,2.979,0,0,0-3.356,0l-7,4.723A3,3,0,0,0,2,9.724V19a3,3,0,0,0,3,3H6a1,1,0,0,1,0,2H5a5.006,5.006,0,0,1-5-5V9.724A4.993,4.993,0,0,1,2.2,5.579L9.2.855a4.981,4.981,0,0,1,5.594,0l7,4.724A5,5,0,0,1,24,9.724Zm-5,5.283a6.952,6.952,0,0,1-2.05,4.949l-3.515,3.438a2.063,2.063,0,0,1-2.87,0l-3.507-3.43A7,7,0,1,1,19,15.007Zm-2,0a5,5,0,1,0-8.536,3.535l3.5,3.422,3.58-3.43A4.958,4.958,0,0,0,17,15.007ZM15,15a3,3,0,1,1-3-3A3,3,0,0,1,15,15Z"/></svg>
+							</span>Tour virtual
+					</a>
+					<a class="buttom" target="_blank" href="https://api.whatsapp.com/send?phone=556832262625">
+							<span class="icon">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" width="24" height="24">
+									<g id="WA_Logo">
+										<g>
+											<path style="fill-rule:evenodd;clip-rule:evenodd;" d="M20.463,3.488C18.217,1.24,15.231,0.001,12.05,0    C5.495,0,0.16,5.334,0.157,11.892c-0.001,2.096,0.547,4.142,1.588,5.946L0.057,24l6.304-1.654    c1.737,0.948,3.693,1.447,5.683,1.448h0.005c6.554,0,11.89-5.335,11.893-11.893C23.944,8.724,22.708,5.735,20.463,3.488z     M12.05,21.785h-0.004c-1.774,0-3.513-0.477-5.031-1.378l-0.361-0.214l-3.741,0.981l0.999-3.648l-0.235-0.374    c-0.99-1.574-1.512-3.393-1.511-5.26c0.002-5.45,4.437-9.884,9.889-9.884c2.64,0,5.122,1.03,6.988,2.898    c1.866,1.869,2.893,4.352,2.892,6.993C21.932,17.351,17.498,21.785,12.05,21.785z M17.472,14.382    c-0.297-0.149-1.758-0.868-2.031-0.967c-0.272-0.099-0.47-0.149-0.669,0.148s-0.767,0.967-0.941,1.166    c-0.173,0.198-0.347,0.223-0.644,0.074c-0.297-0.149-1.255-0.462-2.39-1.475c-0.883-0.788-1.48-1.761-1.653-2.059    s-0.018-0.458,0.13-0.606c0.134-0.133,0.297-0.347,0.446-0.521C9.87,9.97,9.919,9.846,10.019,9.647    c0.099-0.198,0.05-0.372-0.025-0.521C9.919,8.978,9.325,7.515,9.078,6.92c-0.241-0.58-0.486-0.501-0.669-0.51    C8.236,6.401,8.038,6.4,7.839,6.4c-0.198,0-0.52,0.074-0.792,0.372c-0.272,0.298-1.04,1.017-1.04,2.479    c0,1.463,1.065,2.876,1.213,3.074c0.148,0.198,2.095,3.2,5.076,4.487c0.709,0.306,1.263,0.489,1.694,0.626    c0.712,0.226,1.36,0.194,1.872,0.118c0.571-0.085,1.758-0.719,2.006-1.413c0.248-0.694,0.248-1.29,0.173-1.413    C17.967,14.605,17.769,14.531,17.472,14.382z"/>
+										</g>
+									</g>
+							</span>WhatsApp
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
